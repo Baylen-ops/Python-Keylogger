@@ -51,8 +51,8 @@ Keyloggers are often hidden and run silently in the background. Malicious actors
 - Exfiltrate logged data to remote servers
 
 ## How to Protect Against Keyloggers
--Use up-to-date antivirus or anti-malware software
--Regularly check running processes in Task Manager or a system monitor
--Monitor for unusual file changes or log generation
--Educate users on phishing and software hygiene
--Implement application whitelisting and least-privilege policies
+- Use up-to-date antivirus or anti-malware software
+- Regularly check running processes in Task Manager or a system monitor
+- Monitor for unusual file changes or log generation
+- Educate users on phishing and software hygiene
+- Implement application whitelisting and least-privilege policies
