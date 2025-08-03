@@ -29,18 +29,18 @@ if __name__ == "__main__":
     with keyboard.Listener(on_press=key_pressed, on_release=on_release) as listener:
         listener.join()**
 
-What makes keyloggers so dangerous
+## What makes keyloggers so dangerous ##
 Keyloggers are majority of the time are hidden and passivly logging scripts, many attackers abuse this by implemting them into system startup and automated stricts. Usally through TaskSchedular.
 
  
-How to Protect Against Keyloggers#
+##How to Protect Against Keyloggers##
 -Use up-to-date antivirus/anti-malware software
 -Regularly audit running processes
 -Monitor for unusual file changes 
 -Educate users on suspicious behavior and phishing
 
 
-This script is useful for:
+##This script is useful for##
 -Learning how keyloggers operate
 -Understanding attack vectors in endpoint security
 -Practicing defensive detection and mitigation techniques
