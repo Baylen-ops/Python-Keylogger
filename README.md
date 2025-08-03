@@ -43,24 +43,16 @@ if __name__ == "__main__":
         listener.join()
 
 ```
-Why Keyloggers Are Dangerous
+## Why Keyloggers Are Dangerous
 Keyloggers are often hidden and run silently in the background. Malicious actors can:
+- Embed them into system startup scripts or schedule them using tools like Task Scheduler
+- Capture sensitive data, such as passwords and personal messages
+- Use misleading process names to avoid detection in the Task Manager
+- Exfiltrate logged data to remote servers
 
-Embed them into system startup scripts or schedule them using tools like Task Scheduler
-
-Capture sensitive data, such as passwords and personal messages
-
-Use misleading process names to avoid detection in the Task Manager
-
-Exfiltrate logged data to remote servers
-
-How to Protect Against Keyloggers
-Use up-to-date antivirus or anti-malware software
-
-Regularly check running processes in Task Manager or a system monitor
-
-Monitor for unusual file changes or log generation
-
-Educate users on phishing and software hygiene
-
-Implement application whitelisting and least-privilege policies
+## How to Protect Against Keyloggers
+-Use up-to-date antivirus or anti-malware software
+-Regularly check running processes in Task Manager or a system monitor
+-Monitor for unusual file changes or log generation
+-Educate users on phishing and software hygiene
+-Implement application whitelisting and least-privilege policies
